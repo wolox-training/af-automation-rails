@@ -1,1 +1,1 @@
-# mr-automation-rails
+# af-automation-rails
