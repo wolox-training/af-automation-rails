@@ -1,1 +1,1 @@
-# karate
+# mr-automation-rails
