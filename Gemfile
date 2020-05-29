@@ -3,5 +3,9 @@ gem 'rails'
 gem 'cucumber'
 gem 'selenium-cucumber'
 gem 'selenium-webdriver'
-gem 'rubocop', require: false
-gem 'dotenv-rails', groups: [:development, :test]
+group :development, :test do
+    gem 'dotenv-rails'
+    gem 'rspec-rails'
+    gem 'byebug'
+    gem 'rubocop', require: false
+end
