@@ -1,11 +1,11 @@
 source 'https://rubygems.org'
-gem 'rails'
 gem 'cucumber'
+gem 'rails'
 gem 'selenium-cucumber'
 gem 'selenium-webdriver'
 group :development, :test do
-    gem 'dotenv-rails'
-    gem 'rspec-rails'
-    gem 'byebug'
-    gem 'rubocop', require: false
+  gem 'byebug'
+  gem 'dotenv-rails'
+  gem 'rspec-rails'
+  gem 'rubocop', require: false
 end
