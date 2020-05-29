@@ -37,18 +37,5 @@ if $platform == 'android' || $platform == 'iOS'
     puts e.message
     Process.exit(0)
   end
-else
-  begin
-    chromedriver_path = File.join(File.absolute_path(''), 'chromedriver')
-    Selenium::WebDriver::Chrome::Service.driver_path = chromedriver_path
-    options = Selenium::WebDriver::Chrome::Options.new(args:['--incognito','--disable-popup-blocking','binary_location=/var/task/bin/headless-chromium'], prefs: { "disable-popup-blocking":"true"})
-    $driver = Selenium::WebDriver.for(:chrome, options: options)
-    url = ENV['URL']
-    $driver.get(url)
-    $driver.manage.window.maximize
-  rescue Exception => e
-    puts e.message
-    Process.exit(0)
-    $driver.quit
-  end
+
 end
